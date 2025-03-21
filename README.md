@@ -93,5 +93,5 @@ Contributions are welcome! Feel free to **fork** the repository, **raise issues*
 
 ## 📧 Contact  
 📩 **Email**: [hussinossama44@gmail.com](mailto:hussinossama44@gmail.com)  
-🔗 **GitHub**: [Alhussin-Ossama]
+🔗 **GitHub**: [Alhussin-Ossama](https://github.com/Alhussin-Ossama/FarmPulse)
 
