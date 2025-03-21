@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FarmPulse.API</name>
+    </assembly>
+    <members>
+        <member name="T:FarmPulse.API.Controllers.AccountsController">
+            <summary>
+            Handles user account-related operations such as registration, login, and fetching the current user.
+            </summary>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.AccountsController.Register(FarmPulse.API.DTOs.RegisterDto)">
+            <summary>
+            Registers a new user with the provided information.
+            </summary>
+            <param name="model">The registration details including email, password, display name, and phone number.</param>
+            <returns>User details along with a JWT token upon successful registration.</returns>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.AccountsController.Login(FarmPulse.API.DTOs.LoginDto)">
+            <summary>
+            Authenticates a user and returns user details with a JWT token.
+            </summary>
+            <param name="model">The login credentials (email and password).</param>
+            <returns>User details with JWT token if credentials are valid.</returns>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.AccountsController.GetCurrentUser">
+            <summary>
+            Retrieves the currently authenticated user's information.
+            </summary>
+            <returns>User details with a fresh JWT token.</returns>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.AccountsController.CheckEmailExists(System.String)">
+            <summary>
+            Checks if an email is already registered.
+            </summary>
+            <param name="Email">The email to check.</param>
+            <returns>True if the email exists, false otherwise.</returns>
+        </member>
+        <member name="T:FarmPulse.API.Controllers.ChickenController">
+            <summary>
+            Controller responsible for managing chickens, including retrieving, updating, and deleting chicken data.
+            </summary>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.ChickenController.GetAllChickens">
+            <summary>
+            Retrieves all chickens with their details.
+            </summary>
+            <remarks>Returns a list of all chickens stored in the system.</remarks>
+            <response code="200">Returns the list of chickens</response>
+            <response code="404">No chickens found</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.ChickenController.GetChickensByStatus(System.String)">
+            <summary>
+            Retrieves chickens by their activity status.
+            </summary>
+            <param name="status">The activity status (Alive, Sick, LowWeight, Dead).</param>
+            <response code="200">Returns the filtered list of chickens</response>
+            <response code="400">Invalid status provided</response>
+            <response code="404">No chickens found with the given status</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.ChickenController.GetByRfid(System.String)">
+            <summary>
+            Retrieves a chicken by its RFID.
+            </summary>
+            <param name="RFID">The RFID tag of the chicken.</param>
+            <response code="200">Returns the chicken details</response>
+            <response code="404">Chicken not found</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.ChickenController.GetAliveChickenCount">
+            <summary>
+            Retrieves the count of alive chickens.
+            </summary>
+            <response code="200">Returns the count of alive chickens</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.ChickenController.GetDeadChickenCount">
+            <summary>
+            Retrieves the count of dead chickens.
+            </summary>
+            <response code="200">Returns the count of dead chickens</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.ChickenController.SetActivityStatusByUser(System.String,System.String)">
+            <summary>
+            Updates the activity status of a chicken (excluding 'Dead').
+            </summary>
+            <param name="RFID">The RFID tag of the chicken.</param>
+            <param name="newStatus">The new activity status.</param>
+            <response code="202">Status updated successfully</response>
+            <response code="400">Invalid status or attempt to set status to 'Dead'</response>
+            <response code="404">Chicken not found</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.ChickenController.MarkChickenAsDead(System.String)">
+            <summary>
+            Marks a chicken as dead.
+            </summary>
+            <param name="RFID">The RFID tag of the chicken.</param>
+            <response code="202">Chicken marked as dead</response>
+            <response code="404">Chicken not found</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.ChickenController.DeleteChicken(System.String)">
+            <summary>
+            Deletes a chicken record from the database.
+            </summary>
+            <param name="RFID">The RFID tag of the chicken.</param>
+            <response code="202">Chicken deleted successfully</response>
+            <response code="404">Chicken not found</response>
+        </member>
+        <member name="T:FarmPulse.API.Controllers.CreateChickenController">
+            <summary>
+            Handles operations related to chickens and their weights.
+            Provides endpoints for adding new chickens, updating weights, and managing activity status.
+            </summary>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.CreateChickenController.#ctor(FarmPulse.Core.Interfaces.IChickenRepository,AutoMapper.IMapper,FarmPulse.Core.IUnitOfWork,FarmPulse.Core.Interfaces.IWeightRepository)">
+            <summary>
+            Constructor for CreateChickenController to inject dependencies.
+            </summary>
+            <param name="chickenRepository">Repository for chicken data.</param>
+            <param name="mapper">AutoMapper for DTO and model mapping.</param>
+            <param name="unitOfWork">Unit of work for transactional data operations.</param>
+            <param name="weightRepository">Repository for weight data.</param>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.CreateChickenController.AddOrUpdateChickenWithWeight(FarmPulse.API.DTOs.ChickenInputDto)">
+            <summary>
+            Adds a new chicken with weight information or updates existing chicken weight.
+            </summary>
+            <param name="dto">Chicken input data transfer object.</param>
+            <returns>
+            Returns the added chicken data with status 201 if successful.
+            Returns appropriate error messages and status codes if there are failures.
+            </returns>
+            <response code="201">Chicken added or updated successfully.</response>
+            <response code="400">Bad request if chicken can't be saved or updated.</response>
+            <response code="500">Internal server error for unexpected failures.</response>
+        </member>
+        <member name="T:FarmPulse.API.Controllers.NotificationsController">
+            <summary>
+            Controller to manage chicken-related operations.
+            Notifications operations including fetching, marking as read, and deletion.
+            </summary>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.NotificationsController.#ctor(FarmPulse.Core.IUnitOfWork,FarmPulse.Core.Interfaces.INotificationRepository,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FarmPulse.API.Controllers.NotificationsController"/> class.
+            </summary>
+            <param name="unitOfWork">Unit of work for managing database operations.</param>
+            <param name="notificationRepository">Repository for notifications.</param>
+            <param name="mapper">AutoMapper instance for mapping entities to DTOs.</param>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.NotificationsController.GetNotifications">
+            <summary>
+            Retrieves all notifications.
+            </summary>
+            <remarks>
+            Sample request:
+            GET /api/Notifications/GetAllNotifications
+            </remarks>
+            <response code="200">Returns a list of notifications ordered by creation date.</response>
+            <response code="404">If no notifications are found.</response>
+            <response code="500">If there is an error while fetching notifications.</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.NotificationsController.GetUnreadNotifications">
+            <summary>
+            Retrieves all unread notifications.
+            </summary>
+            <remarks>
+            Sample request:
+            GET /api/Notifications/GetAllUnreadNotifications
+            </remarks>
+            <response code="200">Returns a list of unread notifications ordered by creation date.</response>
+            <response code="404">If no unread notifications are found.</response>
+            <response code="500">If there is an error while fetching unread notifications.</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.NotificationsController.MarkAsRead(System.Int32)">
+            <summary>
+            Marks a specific notification as read.
+            </summary>
+            <param name="id">The ID of the notification to mark as read.</param>
+            <remarks>
+            Sample request:
+            PUT /api/Notifications/MarkAsRead/{id}
+            </remarks>
+            <response code="204">Notification marked as read successfully.</response>
+            <response code="404">If the notification with the specified ID is not found.</response>
+            <response code="500">If there is an error while updating the notification.</response>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.NotificationsController.DeleteNotification(System.Int32)">
+            <summary>
+            Deletes a specific notification.
+            </summary>
+            <param name="id">The ID of the notification to delete.</param>
+            <remarks>
+            Sample request:
+            DELETE /api/Notifications/DeleteNotification/{id}
+            </remarks>
+            <response code="204">Notification deleted successfully.</response>
+            <response code="404">If the notification with the specified ID is not found.</response>
+            <response code="500">If there is an error while deleting the notification.</response>
+        </member>
+        <member name="T:FarmPulse.API.Controllers.StatisticsController">
+            <summary>
+            Provides endpoints to retrieve statistical data about chickens, including average weights and mortality/survival rates over different time periods.
+            </summary>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.StatisticsController.#ctor(FarmPulse.Core.Interfaces.IStatisticsRepository,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FarmPulse.API.Controllers.StatisticsController"/> class.
+            </summary>
+            <param name="statisticsRepository">The repository handling statistics data retrieval.</param>
+            <param name="mapper">AutoMapper instance for mapping entities to DTOs.</param>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.StatisticsController.GetStatistics(System.String)">
+            <summary>
+            Retrieves statistics (average weights, mortality rate, survival rate) based on the specified period.
+            </summary>
+            <param name="period">The time period for the statistics. Possible values: "daily", "weekly", "monthly", "yearly".</param>
+            <remarks>
+            Example request:
+            GET /api/Statistics/GetStatistics/daily
+            </remarks>
+            <returns>A list of statistics data for the requested period.</returns>
+            <response code="200">Returns the statistics data successfully.</response>
+            <response code="400">Invalid period value provided.</response>
+            <response code="500">Internal server error while retrieving statistics.</response>
+        </member>
+        <member name="T:FarmPulse.API.Controllers.WeightController">
+            <summary>
+            Manages operations related to chicken weight history
+            </summary>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.WeightController.#ctor(FarmPulse.Core.Interfaces.IWeightRepository,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FarmPulse.API.Controllers.WeightController"/> class.
+            </summary>
+            <param name="weightRepository">Repository for handling weight data.</param>
+            <param name="mapper">Mapper to convert entities to DTOs.</param>
+        </member>
+        <member name="M:FarmPulse.API.Controllers.WeightController.GetWeightHistory(System.String,System.Int32,System.Int32)">
+            <summary>
+            Retrieves the weight history for a chicken by its RFID.
+            </summary>
+            <param name="RFID">The RFID of the chicken.</param>
+            <param name="pageNumber">Page number for pagination (default is 1).</param>
+            <param name="pageSize">Number of records per page (default is 10).</param>
+            <returns>A paginated list of weight history entries.</returns>
+            <response code="200">Returns the weight history list.</response>
+            <response code="404">If the chicken with the given RFID is not found.</response>
+            <response code="500">If an internal server error occurs.</response>
+        </member>
+        <member name="T:FarmPulse.API.DTOs.ChickenInputDto">
+            <summary>
+            Data Transfer Object for inputting chicken data (RFID and weight).
+            Used when adding or updating chicken information.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.ChickenInputDto.RFID">
+            <summary>
+            RFID tag associated with the chicken (used for identification).
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.ChickenInputDto.Weight">
+            <summary>
+            Current weight of the chicken in grams.
+            </summary>
+        </member>
+        <member name="T:FarmPulse.API.DTOs.ChickenToReturnDto">
+            <summary>
+            Data Transfer Object for returning chicken details to the client.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.ChickenToReturnDto.RFID">
+            <summary>
+            RFID tag associated with the chicken (used for identification).
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.ChickenToReturnDto.CurrentWeight">
+            <summary>
+            The current weight of the chicken in grams.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.ChickenToReturnDto.ActivityStatus">
+            <summary>
+            The current activity status of the chicken (e.g., Alive, Sick, LowWeight, Dead).
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.ChickenToReturnDto.DateOfBirth">
+            <summary>
+            The date of birth of the chicken. Defaults to the current date if not specified.
+            </summary>
+        </member>
+        <member name="T:FarmPulse.API.DTOs.LoginDto">
+            <summary>
+            Data Transfer Object for user login credentials.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.LoginDto.Email">
+            <summary>
+            The email address associated with the user account.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.LoginDto.Password">
+            <summary>
+            The password for the user account.
+            </summary>
+        </member>
+        <member name="T:FarmPulse.API.DTOs.NotificationDto">
+            <summary>
+            Data Transfer Object representing a notification sent to the user.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.NotificationDto.Id">
+            <summary>
+            Unique identifier for the notification.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.NotificationDto.Message">
+            <summary>
+            The message content of the notification.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.NotificationDto.CreatedAt">
+            <summary>
+            The date and time when the notification was created.
+            </summary>
+        </member>
+        <member name="T:FarmPulse.API.DTOs.RegisterDto">
+            <summary>
+            Data Transfer Object used for user registration.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.RegisterDto.DisplayName">
+            <summary>
+            User's display name.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.RegisterDto.Email">
+            <summary>
+            User's email address.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.RegisterDto.PhoneNumber">
+            <summary>
+            User's phone number.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.RegisterDto.Password">
+            <summary>
+            User's password with specific complexity requirements.
+            </summary>
+        </member>
+        <member name="T:FarmPulse.API.DTOs.StatisticsDto">
+            <summary>
+            Data Transfer Object representing statistical data of the chickens.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.StatisticsDto.Date">
+            <summary>
+            The date for which the statistics are calculated.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.StatisticsDto.AverageWeight">
+            <summary>
+            The average weight of all chickens on the given date.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.StatisticsDto.MortalityRate">
+            <summary>
+            The mortality rate of chickens (percentage of chickens that died).
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.StatisticsDto.SurvivalRate">
+            <summary>
+            The survival rate of chickens (percentage of chickens that survived).
+            </summary>
+        </member>
+        <member name="T:FarmPulse.API.DTOs.UserDto">
+            <summary>
+            Data Transfer Object representing user information returned after authentication.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.UserDto.DisplayName">
+            <summary>
+            The display name of the user.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.UserDto.Email">
+            <summary>
+            The email address of the user.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.UserDto.Token">
+            <summary>
+            The JWT token generated for the authenticated user.
+            </summary>
+        </member>
+        <member name="T:FarmPulse.API.DTOs.WeighToReturnDto">
+            <summary>
+            Data Transfer Object representing the weight history of a chicken.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.WeighToReturnDto.EntryWeight">
+            <summary>
+            The weight of the chicken when it first entered the weighing station.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.WeighToReturnDto.ExitWeight">
+            <summary>
+            The weight of the chicken when it last exited the weighing station.
+            Default is 0 if not recorded.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.WeighToReturnDto.EntryTime">
+            <summary>
+            The timestamp when the chicken's entry weight was recorded.
+            </summary>
+        </member>
+        <member name="P:FarmPulse.API.DTOs.WeighToReturnDto.ExitTime">
+            <summary>
+            The timestamp when the chicken's exit weight was recorded.
+            Default is the current time if not recorded.
+            </summary>
+        </member>
+    </members>
+</doc>

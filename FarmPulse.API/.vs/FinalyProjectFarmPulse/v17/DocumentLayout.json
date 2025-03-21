@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{10E9EE91-CA85-47BE-B898-BC89E4106301}|FarmPulse.API\\FarmPulse.API.csproj|f:\\itidotnet\\projects\\graduationproject\\farmpulse.api\\farmpulse.api\\farmpulse.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{10E9EE91-CA85-47BE-B898-BC89E4106301}|FarmPulse.API\\FarmPulse.API.csproj|solutionrelative:farmpulse.api\\farmpulse.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10E9EE91-CA85-47BE-B898-BC89E4106301}|FarmPulse.API\\FarmPulse.API.csproj|f:\\itidotnet\\projects\\graduationproject\\farmpulse.api\\farmpulse.api\\extentions\\identityservicesextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10E9EE91-CA85-47BE-B898-BC89E4106301}|FarmPulse.API\\FarmPulse.API.csproj|solutionrelative:farmpulse.api\\extentions\\identityservicesextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10E9EE91-CA85-47BE-B898-BC89E4106301}|FarmPulse.API\\FarmPulse.API.csproj|f:\\itidotnet\\projects\\graduationproject\\farmpulse.api\\farmpulse.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10E9EE91-CA85-47BE-B898-BC89E4106301}|FarmPulse.API\\FarmPulse.API.csproj|solutionrelative:farmpulse.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1956F4F5-6E00-4076-B9DB-8D44A7A1114F}|FarmPulse.Repository\\FarmPulse.Repository.csproj|f:\\itidotnet\\projects\\graduationproject\\farmpulse.api\\farmpulse.repository\\identity\\appidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1956F4F5-6E00-4076-B9DB-8D44A7A1114F}|FarmPulse.Repository\\FarmPulse.Repository.csproj|solutionrelative:farmpulse.repository\\identity\\appidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10E9EE91-CA85-47BE-B898-BC89E4106301}|FarmPulse.API\\FarmPulse.API.csproj|f:\\itidotnet\\projects\\graduationproject\\farmpulse.api\\farmpulse.api\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10E9EE91-CA85-47BE-B898-BC89E4106301}|FarmPulse.API\\FarmPulse.API.csproj|solutionrelative:farmpulse.api\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 196,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FarmPulse.API",
+              "DocumentMoniker": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.API\\FarmPulse.API.csproj",
+              "RelativeDocumentMoniker": "FarmPulse.API\\FarmPulse.API.csproj",
+              "ToolTip": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.API\\FarmPulse.API.csproj",
+              "RelativeToolTip": "FarmPulse.API\\FarmPulse.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-10T13:58:21.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.API\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "FarmPulse.API\\Controllers\\AccountsController.cs",
+              "ToolTip": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.API\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "FarmPulse.API\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T01:02:53.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IdentityServicesExtention.cs",
+              "DocumentMoniker": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.API\\Extentions\\IdentityServicesExtention.cs",
+              "RelativeDocumentMoniker": "FarmPulse.API\\Extentions\\IdentityServicesExtention.cs",
+              "ToolTip": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.API\\Extentions\\IdentityServicesExtention.cs",
+              "RelativeToolTip": "FarmPulse.API\\Extentions\\IdentityServicesExtention.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T22:25:51.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppIdentityDbContext.cs",
+              "DocumentMoniker": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.Repository\\Identity\\AppIdentityDbContext.cs",
+              "RelativeDocumentMoniker": "FarmPulse.Repository\\Identity\\AppIdentityDbContext.cs",
+              "ToolTip": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.Repository\\Identity\\AppIdentityDbContext.cs",
+              "RelativeToolTip": "FarmPulse.Repository\\Identity\\AppIdentityDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T22:13:11.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.API\\Program.cs",
+              "RelativeDocumentMoniker": "FarmPulse.API\\Program.cs",
+              "ToolTip": "F:\\ITIdotNet\\Projects\\GraduationProject\\FarmPulse.API\\FarmPulse.API\\Program.cs",
+              "RelativeToolTip": "FarmPulse.API\\Program.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAgwB8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T14:27:55.619Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

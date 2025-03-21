@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+PVQkTd5dPRqumv7FTKPtOjow63D6k6V+E3em9l0sWY=",
+  "Source": "FarmPulse.API",
+  "BasePath": "_content/FarmPulse.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,14 @@
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\bin\Debug\net8.0\FarmPulse.Core.deps.json
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\bin\Debug\net8.0\FarmPulse.Core.dll
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\bin\Debug\net8.0\FarmPulse.Core.pdb
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\FarmPulse.Core.csproj.AssemblyReference.cache
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\FarmPulse.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\FarmPulse.Core.AssemblyInfoInputs.cache
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\FarmPulse.Core.AssemblyInfo.cs
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\FarmPulse.Core.csproj.CoreCompileInputs.cache
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\FarmPulse.Core.dll
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\refint\FarmPulse.Core.dll
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\FarmPulse.Core.pdb
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\ref\FarmPulse.Core.dll
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\bin\Debug\net8.0\FarmPulse.API.dll
+F:\ITIdotNet\Projects\GraduationProject\FarmPulse.API\FarmPulse.Core\obj\Debug\net8.0\FarmPuls.9993074B.Up2Date

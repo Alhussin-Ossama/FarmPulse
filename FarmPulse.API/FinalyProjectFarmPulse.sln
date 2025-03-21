@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmPulse.API", "FarmPulse.API\FarmPulse.API.csproj", "{10E9EE91-CA85-47BE-B898-BC89E4106301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmPulse.Core", "FarmPulse.Core\FarmPulse.Core.csproj", "{FE866ADF-0ABA-4E76-9933-94F7DD8714F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmPulse.Repository", "FarmPulse.Repository\FarmPulse.Repository.csproj", "{1956F4F5-6E00-4076-B9DB-8D44A7A1114F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmPulse.Service", "FarmPulse.Service\FarmPulse.Service.csproj", "{4FB31694-0162-4536-9015-41AE622BC744}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10E9EE91-CA85-47BE-B898-BC89E4106301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E9EE91-CA85-47BE-B898-BC89E4106301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E9EE91-CA85-47BE-B898-BC89E4106301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E9EE91-CA85-47BE-B898-BC89E4106301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE866ADF-0ABA-4E76-9933-94F7DD8714F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE866ADF-0ABA-4E76-9933-94F7DD8714F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE866ADF-0ABA-4E76-9933-94F7DD8714F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE866ADF-0ABA-4E76-9933-94F7DD8714F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1956F4F5-6E00-4076-B9DB-8D44A7A1114F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1956F4F5-6E00-4076-B9DB-8D44A7A1114F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1956F4F5-6E00-4076-B9DB-8D44A7A1114F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1956F4F5-6E00-4076-B9DB-8D44A7A1114F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB31694-0162-4536-9015-41AE622BC744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB31694-0162-4536-9015-41AE622BC744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB31694-0162-4536-9015-41AE622BC744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB31694-0162-4536-9015-41AE622BC744}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F948BFA-36D4-4300-99DE-13003C62A8BB}
+	EndGlobalSection
+EndGlobal
