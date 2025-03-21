@@ -55,32 +55,43 @@ FarmPulse is an intelligent poultry monitoring system designed to **track chicke
 
 ## 📦 Installation & Setup
 
-1. **Clone the Repository**  
-   ```sh
-   git clone https://github.com/Alhussin-Ossama/FarmPulse.git
-   cd FarmPulse/FarmPulse.API
-2.**Configure the Database**
+### 1️⃣ Clone the Repository  
+```sh
+git clone https://github.com/Alhussin-Ossama/FarmPulse.git
+cd FarmPulse/FarmPulse.API
+```
 
-Update appsettings.json with your SQL Server connection string.
-3.**Apply Migrations & Seed Data**
+### 2️⃣ Configure the Database  
+Update `appsettings.json` with your **SQL Server connection string**.
+
+### 3️⃣ Apply Migrations & Seed Data  
+```sh
 dotnet ef database update
+```
 
-4.**Run the API**
+### 4️⃣ Run the API  
+```sh
 dotnet run
+```
 
-5.**Access API Documentation**
-Open your browser and go to:
-http://localhost:<port>/swagger
+### 5️⃣ Access API Documentation  
+Open your browser and go to:  
+🔗 [`http://localhost:port/swagger`](http://localhost:port/swagger)
 
-**📌 Future Enhancements**
-.🌍 Cloud Deployment (Azure / AWS)
-.📊 Enhanced Data Visualization with Graphs
-.📱 Mobile App for Real-time Monitoring
-.🤖 AI-powered Health Predictions
+---
 
-**🤝 Contributing**
-Contributions are welcome! Feel free to fork the repository, raise issues, or submit pull requests. 🚀
+## 🔮 Future Enhancements  
+- ☁ **Cloud Deployment** (Azure / AWS)  
+- 📊 **Enhanced Data Visualization with Graphs**  
+- 📱 **Mobile App for Real-time Monitoring**  
+- 🤖 **AI-powered Health Predictions**  
 
-**📧 Contact**
-📩 Email: hussinossama44@gmail.com
-🔗 GitHub: FarmPulse Repository
+---
+
+## 🤝 Contributing  
+Contributions are welcome! Feel free to **fork** the repository, **raise issues**, or submit **pull requests**. 🚀  
+
+## 📧 Contact  
+📩 **Email**: [hussinossama44@gmail.com](mailto:hussinossama44@gmail.com)  
+🔗 **GitHub**: [FarmPulse Repository](https://github.com/Alhussin-Ossama/FarmPulse)  
+
