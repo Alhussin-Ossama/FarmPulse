@@ -23,6 +23,9 @@ FarmPulse is an intelligent poultry monitoring system designed to **track chicke
 - **Authentication**: JWT Tokens, ASP.NET Identity
 - **Frontend (Planned Integration)**: HTML, CSS, JavaScript
 
+## 🎥 Demo Video
+[Watch the Demo on Google Drive]([https://youtube.com/your-video-link](https://drive.google.com/file/d/1cdPsVy_mCxQqVlXHIjRil5z-etusYpK7/view?usp=drive_link))
+
 ## 📜 API Endpoints
 
 ### 🔐 Authentication
